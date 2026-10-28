@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An independent, reproducible analysis of Virginia's 2020 and 2024 presidential election results across all 133 counties and independent cities.">
+  <meta name="theme-color" content="#f8f7f2">
+  <title>Virginia's Rightward Shift, Locality by Locality | The Vote File</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="The Vote File, home"><span class="wordmark-icon" aria-hidden="true">▤</span><span>THE VOTE FILE</span></a>
+      <nav aria-label="Sections"><a href="#findings">Findings</a><a href="#explore">Explore the data</a><a href="#methodology">Methodology</a></nav>
+      <span class="portfolio-label">INDEPENDENT ANALYSIS</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <article>
+      <section class="hero reading-width">
+        <div class="kicker"><span class="tiny-rule"></span> ELECTION ANALYTICS <span class="kicker-separator">/</span> VIRGINIA</div>
+        <h1>Virginia shifted right.<br><em>Five northern localities accounted for half the margin change.</em></h1>
+        <p class="dek">Kamala Harris carried Virginia in 2024, but by a substantially smaller margin than Joe Biden four years earlier. The Democratic-minus-Republican margin narrowed in most localities—and some of the largest changes in raw vote margins occurred in populous Northern Virginia.</p>
+        <div class="byline"><div class="byline-mark">VF</div><div><strong>Independent data analysis</strong><span>October 2026 · Official election returns</span></div></div>
+        <div class="hero-rule"></div>
+      </section>
+
+      <section class="opening-chart container" id="findings" aria-labelledby="opening-title">
+        <div class="story-topline"><div><p class="section-kicker">01 / THE STATEWIDE STORY</p><h2 id="opening-title">A clear win, but a thinner lead</h2></div><p class="chart-caption">Share of all presidential votes cast in Virginia</p></div>
+        <div class="wide-card">
+          <div class="vote-bars" id="voteBars" aria-label="Stacked bars showing Democratic, Republican, and other candidate vote shares in 2020 and 2024"></div>
+          <div class="legend"><span><i class="blue"></i> Democratic</span><span><i class="red"></i> Republican</span><span><i class="neutral"></i> Other candidates and write-ins</span></div>
+          <div class="mini-metrics"><div><span class="metric-label">Democratic statewide lead</span><strong id="demLead" class="serif-number">−</strong><span>votes, 2020 → 2024</span></div><div><span class="metric-label">D–R margin shift toward Republicans</span><strong id="stateSwing" class="serif-number">−</strong><span>percentage points; not a change in Trump's vote share</span></div><div><span class="metric-label">Votes recorded for president</span><strong id="ballotChange" class="serif-number">−</strong><span>change from 2020 to 2024; not total ballots cast</span></div></div>
+          <p class="chart-source">Source: Virginia Department of Elections, official presidential contest tables. Shares and margins use votes recorded for president as the denominator, which is different from all ballots cast in the election.</p>
+        </div>
+      </section>
+
+      <section class="narrative reading-width"><p class="drop-cap">Virginia's Democratic margin fell from 451,138 votes in 2020 to 260,310 in 2024. That's a reduction of 190,828 votes even though the total number of presidential votes cast rose slightly.</p><p>That isn't simply a story about one big county. On a percentage-point basis, <strong>120 of Virginia's 133 counties and independent cities shifted toward Republicans</strong> between the two elections. The shift was geographically broad, but populous places mattered most to the statewide vote difference.</p></section>
+
+      <section class="feature-section container" aria-labelledby="feature-title">
+        <div class="story-topline"><div><p class="section-kicker">02 / WHERE THE MARGINS CHANGED</p><h2 id="feature-title">Five localities, about half the margin reduction</h2></div><p class="chart-caption">Five selected Northern Virginia localities, not the entire region</p></div>
+        <div class="feature-grid">
+          <div class="donut-card"><div class="ring-wrap"><div class="ring ring-erosion" id="erosionRing"><div class="ring-center"><strong id="erosionShare">−</strong><span>of margin reduction</span></div></div></div><h3>Share of statewide Democratic margin reduction</h3><p>Fairfax, Arlington, Alexandria, Loudoun and Prince William together accounted for <strong id="novaVotes">−</strong> of the 190,828-vote decrease. This is an arithmetic contribution, not an explanation of voter behavior.</p></div>
+          <div class="donut-card subdued"><div class="ring-wrap"><div class="ring ring-ballots" id="ballotRing"><div class="ring-center"><strong id="ballotShare">−</strong><span>of 2024 votes</span></div></div></div><h3>Share of Virginia's recorded presidential votes</h3><p>Those same five localities accounted for <strong id="ballotShareText">−</strong> of presidential votes statewide in 2024.</p></div>
+        </div>
+        <p class="aside-note"><strong>Important distinction:</strong> A locality's change in raw Democratic-minus-Republican vote margin is additive across places; its percentage-point shift is not. The five-locality grouping is explicitly chosen for comparison and does not describe all of Northern Virginia.</p>
+      </section>
+
+      <section class="rank-section container" aria-labelledby="rank-title">
+        <div class="story-topline"><div><p class="section-kicker">03 / THE LARGEST CONTRIBUTIONS</p><h2 id="rank-title">Fairfax's D–R vote margin narrowed by 46,999 votes</h2></div><p class="chart-caption">Decline in Democratic-minus-Republican vote margin, 2020–2024</p></div>
+        <div class="wide-card"><div id="rankingChart" class="ranking-chart" role="img" aria-label="Bar chart of the eight localities with the largest erosion in Democratic raw-vote margin"></div><p class="chart-source">A positive number means the Democratic-minus-Republican vote margin was smaller in 2024, regardless of which candidate won the locality.</p></div>
+      </section>
+
+      <section class="narrative reading-width"><h2>Why geography and scale both matter</h2><p>A small locality can experience a dramatic percentage-point shift and have little effect on the statewide total. A populous locality can shift by fewer points and still change the statewide vote margin by tens of thousands of votes.</p><p>For that reason, this report presents both measurements. It does <em>not</em> assume that any individual voter changed their preference. Changes in participation, the electorate's composition, third-party choices and persuasion could all affect aggregate results; locality totals alone cannot separate those mechanisms.</p></section>
+
+      <section id="explore" class="explorer container" aria-labelledby="explore-title">
+        <div class="story-topline"><div><p class="section-kicker">04 / INTERACTIVE DATA EXPLORER</p><h2 id="explore-title">Explore all 133 Virginia localities</h2></div><p class="chart-caption">Search, rank, and inspect each locality</p></div>
+        <div class="explorer-shell">
+          <div class="explorer-controls"><div class="field"><label for="localitySearch">Find a city or county</label><input type="search" id="localitySearch" placeholder="Try Fairfax, Richmond, Loudoun…" autocomplete="off"></div><div class="field"><label for="sortMetric">Rank by</label><select id="sortMetric"><option value="erosion">Raw D–R margin reduction (votes)</option><option value="swing">Margin shift toward Republicans (points)</option><option value="votechange">Change in presidential votes</option><option value="alpha">Locality name (A–Z)</option></select></div><div class="field"><label for="regionFilter">Show</label><select id="regionFilter"><option value="all">All Virginia localities</option><option value="nova">Five selected Northern Virginia localities</option><option value="other">All other localities</option></select></div></div>
+          <div class="explorer-body"><div class="table-area"><div class="table-scroll"><table class="data-table"><thead><tr><th>Locality</th><th class="numeric">R-ward margin shift</th><th class="numeric">D–R margin reduction</th><th class="numeric">Presidential votes Δ</th></tr></thead><tbody id="localityTable"></tbody></table></div><div class="table-footer"><span id="rowCount">−</span><button type="button" id="showMore">Show more localities ↓</button></div></div><aside id="localityDetail" class="detail" aria-live="polite"><span class="detail-kicker">LOCALITY PROFILE</span><h3 id="detailName">Select a locality</h3><p id="detailSubtitle">Compare presidential votes and margins across elections.</p><div id="detailBars"></div><div class="detail-metrics" id="detailMetrics"></div><p class="detail-note">D–R margin uses votes recorded for president, not all ballots cast. A positive R-ward margin shift means the D–R percentage-point margin declined, not necessarily that Trump's vote share rose by the same amount.</p></aside></div>
+        </div>
+      </section>
+
+      <section class="method-section container" id="methodology" aria-labelledby="method-title"><div class="story-topline"><div><p class="section-kicker">05 / TRANSPARENT METHODS</p><h2 id="method-title">How the numbers were calculated</h2></div></div><div class="method-grid"><div><h3>Data collection and checks</h3><p>Data came from Virginia's official historical election database for the presidential contests in 2020 and 2024, downloaded October 28, 2026. Each file includes precinct records as well as locality totals. We used the 133 locality rows only, avoiding precinct double-counting. Locality totals reconcile exactly with the statewide results in both elections.</p><h3>Definitions</h3><p><strong>D–R margin (percentage points)</strong> = 100 × (Democratic votes − Republican votes) ÷ votes recorded for president. <strong>R-ward margin shift</strong> = the 2020 D–R margin minus the 2024 D–R margin; it is not the change in Trump's vote share. <strong>Raw margin reduction</strong> = (Democratic − Republican votes in 2020) minus the corresponding value in 2024.</p></div><div><h3>Interpretation limits</h3><p>This compares geographic totals, not individual voter histories. It cannot determine who switched candidates or why. Votes recorded for president are not the same as all ballots cast or turnout among registered voters. The five Northern Virginia localities are a deliberately selected group, not an official regional boundary or the entire region.</p><div class="source-box"><strong>Verify or reproduce this analysis</strong><a href="https://historical.elections.virginia.gov/contest/144567" target="_blank" rel="noopener noreferrer">Official 2020 contest ↗</a><a href="https://historical.elections.virginia.gov/contest/161256" target="_blank" rel="noopener noreferrer">Official 2024 contest ↗</a><a href="https://www.elections.virginia.gov/news-releases/archive/2024/2024-election-results-certified-1.html" target="_blank" rel="noopener noreferrer">2024 certification notice ↗</a><a href="virginia_election_analysis_repro.zip" download>Download full reproducibility package ↓</a><a href="virginia_locality_analysis.csv" download>Download analyzed locality CSV ↓</a></div></div></div></section>
+      <section class="conclusion reading-width"><p class="section-kicker">THE BOTTOM LINE</p><h2>What changed is clear. Why the totals shifted requires more evidence.</h2><p>Virginia's 2024 presidential result was closer than in 2020. The data shows both a broad decline in Democratic-minus-Republican margins across localities and a disproportionate arithmetic contribution from several large Northern Virginia jurisdictions. Understanding the behavior behind those changes would require additional evidence—surveys, voter-file research and reporting on the ground.</p></section>
+    </article>
+  </main>
+  <footer><div class="footer-inner"><div><strong>THE VOTE FILE</strong><p>An independently produced election-analysis portfolio draft. Not affiliated with The New York Times or the Virginia Department of Elections.</p></div><a href="#top">Back to top ↑</a></div></footer>
+  <script src="analysis.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
